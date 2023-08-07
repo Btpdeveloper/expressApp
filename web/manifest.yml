@@ -1,0 +1,15 @@
+---
+  applications:
+  - name : appr
+    memory: 128M
+    env:
+      destinations: >
+        [
+           {
+          "name":"expressapp",
+          "url":"https://expressapp.cfapps.us10-001.hana.ondemand.com/" ,
+          "forwardAuthToken":true
+            }
+        ]
+    services:
+    - nodexsuaa

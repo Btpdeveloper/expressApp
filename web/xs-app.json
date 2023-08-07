@@ -1,0 +1,9 @@
+{
+    "routes":[
+        {
+            "source":"^/expressapp/(.*)$",
+            "target":"$1",
+            "destination":"expressapp"
+        }
+    ]
+}
