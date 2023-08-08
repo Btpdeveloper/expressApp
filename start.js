@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const JWTStrategy = require('@sap/xssec').JWTStrategy;
 const app = express();
 
-
+const employees = require('./employees.json');
 const services = xsenv.getServices({ uaa: 'nodexsuaa' });
 
 passport.use(new JWTStrategy(services.uaa));
