@@ -15,9 +15,9 @@ app.use(passport.initialize());
 app.use(passport.authenticate('JWT', { session: false }));
 
 app.get('/employees', function (req, res) {
-    var isAuthorized = req.authInfo.checkScope('$XSAPPName.Display'); //To check the scope of the end User
+    var isAuthorized = req.authInfo.checkScope('$XSAPPNAME.Display'); //To check the scope of the end User
     if (isAuthorized) {
-        res.status(200).json(Employees);
+        res.status(200).json(employees);
     }
     else {
         res.status(403).send('Forbidden');
